@@ -27,7 +27,7 @@ export default {
   },
   data() {
     return {
-       defaultImg:"/static/img/ic-default -Waiting@2x.png",
+       defaultImg:"./static/img/ic-default -Waiting@2x.png",
        defaultText:'更多功能开发ing...',
     }
   },
@@ -41,23 +41,23 @@ export default {
     renderDefaultText() {
        switch(this.type) {
          case 'lookingForward':
-           this.defaultImg = "/static/img/ic-default -Waiting@2x.png";
+           this.defaultImg = "./static/img/ic-default -Waiting@2x.png";
            this.defaultText = '更多功能开发ing...'
            break;
          case 'noNetWork':
-           this.defaultImg = "/static/img/ic_default-nowifi@2x.png";
+           this.defaultImg = "./static/img/ic_default-nowifi@2x.png";
            this.defaultText = '亲，暂无网络啦~'
            break;
          case 'noCard':
-           this.defaultImg = "/static/img/ic-default-nocard@2x.png";
+           this.defaultImg = "./static/img/ic-default-nocard@2x.png";
            this.defaultText = '暂无可用现金券'
            break;
          case 'noData':
-           this.defaultImg = "/static/img/ic_default-data@2x.png";
+           this.defaultImg = "./static/img/ic_default-data@2x.png";
            this.defaultText = '亲，还木有相关数据哟~'
            break;
          default:
-           this.defaultImg = "/static/img/ic-default -Waiting@2x.png";
+           this.defaultImg = "./static/img/ic-default -Waiting@2x.png";
            this.defaultText = '更多功能开发ing...'
            break;    
        }

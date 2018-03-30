@@ -132,22 +132,22 @@ export default {
     return {
       bannerList:[
          { url: 'javascript:', 
-           img: '/static/img/ic_mine_bg@2x.png',
+           img: './static/img/ic_mine_bg@2x.png',
            title: '送你一朵fua' 
          },
           { url: 'javascript:', 
-            img: '/static/img/ic_mine_bg@2x.png',
+            img: './static/img/ic_mine_bg@2x.png',
             title: '送你一次旅行',
           }
        ],
 
       lanternList: [
         { redirectUrl: 'javascript:', 
-           img: '/static/img/ic_mine_bg@2x.png',
+           img: './static/img/ic_mine_bg@2x.png',
            lanternContent: '送你一朵fua' 
          },
           { redirectUrl: 'javascript:', 
-           img: '/static/img/ic_mine_bg@2x.png',
+           img: './static/img/ic_mine_bg@2x.png',
            lanternContent: '送你一朵草' 
          },
       ],//走马灯数据
@@ -157,32 +157,32 @@ export default {
         { 
           id:0,
           title:'首页',
-          defaultIcon:'/static/img/商城icon@2x.png',
-          activeIcon:'/static/img/商城icon-on@2x.png',
+          defaultIcon:'./static/img/商城icon@2x.png',
+          activeIcon:'./static/img/商城icon-on@2x.png',
           path:'/',  //对应路由路径
           query:{}   //路由携带的参数
         },
         {
           id:1,
           title:'分期商城',
-          defaultIcon:'/static/img/首页icon@2x.png',
-          activeIcon:'/static/img/首页icon-on@2x.png',
+          defaultIcon:'./static/img/首页icon@2x.png',
+          activeIcon:'./static/img/首页icon-on@2x.png',
           path:'/',
           query:{}
         },
         {
           id:2,
           title:'信用生活',
-          defaultIcon:'/static/img/信用icon@2x.png',
-          activeIcon:'/static/img/信用icon-on@2x.png',
+          defaultIcon:'./static/img/信用icon@2x.png',
+          activeIcon:'./static/img/信用icon-on@2x.png',
           path:'/',
           query:{}
         },
         {
           id:3,
           title:'我的',
-          defaultIcon:'/static/img/我的icon@2x.png',
-          activeIcon:'/static/img/我的icon-on@2x.png',
+          defaultIcon:'./static/img/我的icon@2x.png',
+          activeIcon:'./static/img/我的icon-on@2x.png',
           path:'/',
           query:{}
         },
@@ -192,46 +192,46 @@ export default {
         { 
           price:2000.15,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png',
+          img:'./static/img/scrollitem.png',
           hasAmortizeNumber:true
         },
         { 
           price:200.5,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png',
+          img:'./static/img/scrollitem.png',
           hasAmortizeNumber:true
         },
         { 
           price:200.51,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png',
+          img:'./static/img/scrollitem.png',
           hasAmortizeNumber:true
         },
         { 
           price:200,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png',
+          img:'./static/img/scrollitem.png',
           hasAmortizeNumber:true
         },
         { 
           price:200,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png'
+          img:'./static/img/scrollitem.png'
         },
         { 
           price:200,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png'
+          img:'./static/img/scrollitem.png'
         },
         { 
           price:200,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png'
+          img:'./static/img/scrollitem.png'
         },
         { 
           price:200,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png'
+          img:'./static/img/scrollitem.png'
         },
       ],
 
@@ -239,19 +239,19 @@ export default {
       mailData:{
         title:'华为HUAWEI Mate 10 Pro 现货分期',
         price:2001.88,
-        img:'/static/img/mailItem.png'
+        img:'./static/img/mailItem.png'
       },  //商城item的数据
       recommendData:{
         title:'华为HUAWEI Mate 10 Pro 现货分期 Apple Iphone 1 Plus 128G 红色特别版 移动联通电信',
         price:2001.88,
-        img:'/static/img/recommendItem.png'
+        img:'./static/img/recommendItem.png'
       },  //商城item的数据
 
       //头部右侧icon配置
       icon:{
          width:'0.4rem',
          height: '0.45rem',
-         src:'/static/img/recommendItem.png'
+         src:'./static/img/recommendItem.png'
       },
 
       code:[], //用户输入的验证码

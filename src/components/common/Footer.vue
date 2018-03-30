@@ -19,32 +19,32 @@ export default {
         { 
           id:0,
           title:'首页',
-          defaultIcon:'/static/img/商城icon@2x.png',
-          activeIcon:'/static/img/商城icon-on@2x.png',
+          defaultIcon:'./static/img/商城icon@2x.png',
+          activeIcon:'./static/img/商城icon-on@2x.png',
           path:'/index',
           query:{}
         },
         {
           id:1,
           title:'分期商城',
-          defaultIcon:'/static/img/首页icon@2x.png',
-          activeIcon:'/static/img/首页icon-on@2x.png',
+          defaultIcon:'./static/img/首页icon@2x.png',
+          activeIcon:'./static/img/首页icon-on@2x.png',
           path:'/mallIndex',
           query:{}
         },
         {
           id:2,
           title:'信用生活',
-          defaultIcon:'/static/img/信用icon@2x.png',
-          activeIcon:'/static/img/信用icon-on@2x.png',
+          defaultIcon:'./static/img/信用icon@2x.png',
+          activeIcon:'./static/img/信用icon-on@2x.png',
           path:'/creditLifeIndex',
           query:{}
         },
         {
           id:3,
           title:'我的',
-          defaultIcon:'/static/img/我的icon@2x.png',
-          activeIcon:'/static/img/我的icon-on@2x.png',
+          defaultIcon:'./static/img/我的icon@2x.png',
+          activeIcon:'./static/img/我的icon-on@2x.png',
           path:'/mine',
           query:{}
         },

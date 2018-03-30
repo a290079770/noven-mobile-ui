@@ -21,7 +21,7 @@
 			       :forbid="['chinese','spechars']"
 			       @input="phone = $event"
 			     />
-    			<a href="javscript:;" v-show="phone" @click.stop="clearPhone()"><img src="/static/img/ic_Shut@2x.png" /></a>
+    			<a href="javscript:;" v-show="phone" @click.stop="clearPhone()"><img src="../../assets/images/ic_Shut@2x.png" /></a>
     		</div>
     	</div>
     	<div class="form-group">
@@ -38,7 +38,7 @@
 			     />
 
     			<a href="javscript:;" @click.stop="showPassEye()" v-show="showEye">
-    				<img :src="showPass ? '/static/img/ic_eyes_no@2x.png' : '/static/img/ic_eyes_yes@2x.png'" 
+    				<img :src="showPass ? './static/img/ic_eyes_no@2x.png' : './static/img/ic_eyes_yes@2x.png'" 
     				/>
     			</a>
 
