@@ -74,7 +74,7 @@ export default {
           color: white;
           text-align: center;
           line-height: 0.44rem;
-          background: url(/static/img/分期底@2x.png);
+          background: url(../../../../static/img/分期底@2x.png);
           background-size: 100% 100%
         }
       }
@@ -93,7 +93,7 @@ export default {
           color: white;
           text-align: center;
           line-height: 0.42rem;
-          background: url(/static/img/分期底@2x.png);
+          background: url(../../../../static/img/分期底@2x.png);
           background-size: 100% 100%;
           .amortize-number {
              position: absolute;

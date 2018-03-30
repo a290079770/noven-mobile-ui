@@ -24,7 +24,7 @@
              @input="phone = $event"
            />
 
-    			<a href="javscript:;" v-show="phone" @click="clearPhone()"><img src="/static/img/ic_Shut@2x.png" /></a>
+    			<a href="javscript:;" v-show="phone" @click="clearPhone()"><img src="../../assets/images/ic_Shut@2x.png" /></a>
     		</div>
     	</div>
     	<div class="form-group" >

@@ -9,7 +9,7 @@
       <div class="shop-model-title">
         <p>请选择商品属性</p>
         <span class="close fr" @click="submitSelected">
-          <img src="/static/img/ic-close@2x.png" alt="">
+          <img src="../../../assets/images/ic-close@2x.png" alt="">
         </span>
       </div>
 
@@ -18,7 +18,7 @@
 
          <section>
             <figure>
-              <img src="/static/img/detail-commodity.png">
+              <img src="../../../assets/images/detail-commodity.png">
             </figure>
 
             <section class="selected-commo-info">

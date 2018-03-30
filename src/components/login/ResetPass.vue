@@ -25,7 +25,7 @@
 			     />
 
 				<a href="javscript:;" @click="changePassEyeType(1)" v-show="showNewEye">
-					<img :src="changeNewEye ? '/static/img/ic_eyes_no@2x.png' : '/static/img/ic_eyes_yes@2x.png'" 
+					<img :src="changeNewEye ? './static/img/ic_eyes_no@2x.png' : './static/img/ic_eyes_yes@2x.png'" 
 					/>
 				</a>
     		</div>
@@ -46,7 +46,7 @@
 			     />
 
 				<a href="javscript:;" @click="changePassEyeType(2)" v-show="showReEye">
-					<img :src="changeReEye ? '/static/img/ic_eyes_no@2x.png' : '/static/img/ic_eyes_yes@2x.png'" 
+					<img :src="changeReEye ? './static/img/ic_eyes_no@2x.png' : './static/img/ic_eyes_yes@2x.png'" 
 					/>
 				</a>
 
