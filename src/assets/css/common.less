@@ -1,0 +1,399 @@
+
+//首页样式
+@fs:0.28rem;
+//预设样式
+@primary:#03ace8;
+@info:#00698b;
+
+
+// 预设类
+.alignCenter(){
+  display: flex;
+	justify-content: space-between;
+}
+//公共头部
+.header{
+	width: 7.0rem;
+	height: .88rem;
+	line-height: .88rem;
+	margin: 0 auto;
+	font-size: .38rem;
+  color: #222;
+  .alignCenter();
+}
+
+.pr() {
+	position: relative;
+	left: 0;
+	top: 0;
+}
+
+.pa(@top,@right,@bottom,@left) {
+	position: absolute;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+	left: @left;
+}
+
+.pf() {
+	position: fixed;
+   	bottom: 0;
+   	left: 0;
+}
+
+//居中
+.mc() {
+	margin: 0 auto;
+}
+
+//自定义排列
+.flex(@arrow) {
+    display: flex;
+ 	justify-content: @arrow;
+ 	align-items: center;
+}
+
+//弹性居中
+.flex-center() {
+    display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+}
+
+//单行省略
+.text-ell() {
+	overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+//几行省略
+.text-ess(@linenum) {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: @linenum;
+	overflow: hidden;
+}
+
+html {
+	height: 100%;
+}
+body {
+  height: 100%;
+  background: #f0f1fa;
+  -webkit-tap-highlight-color:transparent
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+ }
+
+
+
+#app {
+  height: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.wj-btn-primary {
+	text-align: center;
+	padding-top:1rem;
+	button{
+	    display: inline-block;
+	    background: url(../../../static/img/ic_button@2x.png) left center no-repeat;
+	    background-size:6.80rem 1.52rem;
+	    width:6.80rem;
+	    height:1.52rem;
+	    font-size: .34rem;
+	    color: #FFFFFF;
+	}
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #CCCCCC;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #CCCCCC;
+}
+
+input:-ms-input-placeholder{
+    color: #CCCCCC;
+}
+
+input::-webkit-input-placeholder{
+    color: #CCCCCC;
+}
+
+.text-lt{
+    text-align: left;
+}
+.text-rt{
+    text-align: right;
+}
+
+.fr {
+	float: right;
+}
+
+.fl {
+	float: left;
+}
+
+
+
+//公用弹出框
+.select-shop-model {
+  width: 7.5rem;
+  padding-bottom:1rem;
+  max-height: 7.8rem;
+  font-size: 0.26rem;
+  .shop-model-title {
+    position: relative;
+    height: 0.8rem;
+    width: 100%;
+    line-height: 0.8rem;
+    background-color: #eeeff3;
+    p {
+      text-align: center;
+      font-size: 0.3rem;
+      color: #aeaead;
+    }
+    .close {
+      position: absolute;
+      right:0;
+      top:0;
+      width: 0.8rem;
+      height: 0.8rem;
+      line-height: 0.8rem;
+      text-align: center;
+      img{
+        width:0.36rem;
+        height:auto;
+        vertical-align: middle;
+      }
+    }
+  }
+  .shop-model-descri {
+    max-height: 4.38rem;
+    overflow-x: hidden;
+    padding: 0 0 0.24rem 0.24rem;
+    .descri-color {
+      position: relative;
+      box-sizing: border-box;
+      min-height: 1.04rem;
+      padding: 0.2rem 0 0.2rem 1.5rem;
+      line-height: 0.64rem;
+      span {
+        position: absolute;
+        left: 0.0;
+        top:0.2rem;
+        width: 1.5rem;
+        font-size: 0.3rem;
+        color:#AEAEAD;
+        text-align: left;
+        vertical-align: middle;
+      }
+      .btns {
+        line-height: 0.64rem;
+        font-size: 0;
+        button {
+          width: auto;
+          height: 0.54rem;
+          border: 0.01rem solid #aeaead;
+          border-radius: 0.04rem;
+          font-size: 0.3rem;
+          color: #666;
+          margin-right: 0.22rem;
+          vertical-align: middle;
+        }
+        button.active {
+          border-color: #FF5349;
+          color:#FF5349;
+        }
+        .jian-btn{
+          width: 0.56rem;
+          height: 0.56rem;
+          border-radius: 0.04rem 0 0 0.04rem;
+          margin:0;
+        }
+        .jia-btn {
+          width: 0.56rem;
+          height: 0.56rem;
+          margin: 0;
+          border-radius:0 0.04rem 0.04rem 0;
+        }
+        .num-btn {
+          width: 0.76rem;
+          height: 0.56rem;
+          border-left: none;
+          border-right: none;
+          border-radius:0;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .lianlian-pay{
+    height: 1.38rem;
+    width: 100%;
+    line-height: 1.38rem;
+    .pay-img{
+      width: .52rem;
+      height: .3rem;
+      margin: 0 .2rem 0 .23rem;
+      img{
+        width: .52rem;
+        height: .3rem;
+        vertical-align: middle;
+      }
+    }
+    .pay-name{
+      font-size: .3rem;
+      color: #666;
+    }
+    .pay-radio{
+      height: .32rem;
+      width: .32rem;
+      margin-right: .23rem;
+    }
+  }
+ } 
+  
+.whitebg {
+    min-height: 100vh;
+    background: #FFFFFF;
+}
+
+
+.header-placehold {
+    width: 100%;
+    height: 0.88rem;
+}
+
+
+//操作的结果
+.oparate-result {
+   .flex-center();
+   flex-direction: column;
+   width: 100%;
+   height: 3.42rem;
+   color:white;
+   font-size: 0.3rem;
+
+   figure {
+     padding: 0;
+     margin: 0;
+     margin-bottom: 0.2rem;
+     width: 1.5rem;
+     height: 1.5rem;
+
+     img {
+      width: 100%;
+      height: 100%;
+     }
+   }
+}
+
+.oprate-process {
+  .flex-center;
+   margin-top: 0.15rem;
+   height: 2.6rem;
+   width: 100%;
+   background:white;
+
+   figure {
+    width: 0.72rem;
+    height: 0.72rem;
+   }
+
+
+   & > section {
+      .flex(space-around);
+      width: 5.34rem;
+      height: 1.17rem;
+      
+      span {
+        .flex-center();
+        flex-direction: column;
+      }
+
+      .right-arrow {
+        margin-top: -0.45rem;
+        transform: scaleX(0.5);
+        font-size: 0.4rem;
+        color:#A6A6A6;
+      }
+
+      p {
+        margin-top: 0.15rem;
+        font-size: 0.24rem;
+        color:#222;
+      }
+
+      .no-state {
+        color:#666;
+      }
+
+   }
+
+}
+
+
+.recommend-forU {
+   .flex(flex-start);
+   .pr();
+   width: 100%;
+   height: 1rem;
+
+   p {
+    width: 7.14rem;
+    margin-left: 0.1rem;
+    height: 1px;
+    background: #ddd;
+   }
+
+   span {
+     position: absolute;
+     left: 50%;
+     top:0;
+     line-height: 1rem;
+     text-align: center;
+     background: #f0f1fa;
+     margin-left: -0.96rem;
+     width: 1.92rem;
+     height: 1rem;
+     color:#666;
+   }
+}
+
+.recommend-forU-list {
+    .mc();
+    .flex(flex-start);
+    flex-wrap: wrap;
+    width: 7.3rem;
+    height: auto;
+    min-height: 1rem;
+
+    li {
+      margin-bottom: 0.15rem;
+      width: 3.6rem;
+      height: 5.08rem;
+    }
+}
