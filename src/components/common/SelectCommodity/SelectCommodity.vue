@@ -389,4 +389,20 @@ export default {
       margin-top: -0.1rem;
    }
 
+
+
+   .wj-btn-primary {
+      text-align: center;
+      padding-top:1rem;
+      button{
+          display: inline-block;
+          background: url(../../../../static/img/ic_button@2x.png) left center no-repeat;
+          background-size:6.80rem 1.52rem;
+          width:6.80rem;
+          height:1.52rem;
+          font-size: .34rem;
+          color: #FFFFFF;
+      }
+    }
+
 </style>
