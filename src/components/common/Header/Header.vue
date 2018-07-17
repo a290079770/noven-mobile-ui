@@ -1,36 +1,43 @@
 <template>
-  <mt-header fixed :title="headerTitle" :style="border ? borderCSS : {}">
-    <mt-button 
-      v-show="isBackShow" 
-      icon="back" 
-      slot="left" 
-      @click="backClick"
-      >
-    </mt-button>
+  <section>
+    <mt-header 
+      fixed 
+      :title="headerTitle" 
+      :style="{boxSizing:'border-box',borderBottom:border ? '1px solid #e1e1e1':'none',background:bgColorCopy,color:colorCopy}">
+        <mt-button 
+          v-show="isBackShow" 
+          icon="back" 
+          slot="left" 
+          @click="backClick"
+          >
+        </mt-button>
 
-    <mt-button 
-        v-if="defaultRightBtnShow" 
-        slot="right"
-        @click="rightBtnClick($event)"
-        :style="{color: !rightTextIsBtn ?'#222' :'#375DFD'}"
-      >{{headerRightBtnTitle}}
-    </mt-button>
+        <mt-button 
+            v-if="defaultRightBtnShow" 
+            slot="right"
+            @click="rightBtnClick($event)"
+            :style="{color: !rightTextIsBtn ?'#222' :'#375DFD'}"
+          >{{headerRightBtnTitle}}
+        </mt-button>
 
 
-    <mt-button 
-        v-if="isIconShow" 
-        slot="right"
-        @click="rightBtnClick($event)"
-      >
+        <mt-button 
+            v-if="isIconShow" 
+            slot="right"
+            @click="rightBtnClick($event)"
+          >
 
-      <img 
-      :style="icon" 
-      :src="icon.src" 
-      class="icon-img"
-      >
+          <img 
+          :style="icon" 
+          :src="icon.src" 
+          class="icon-img"
+          >
 
-    </mt-button>
-  </mt-header>
+        </mt-button>
+      </mt-header>
+
+      <section class="header-place"></section>
+  </section>
 </template>
 <script>
 export default {
@@ -42,7 +49,9 @@ export default {
     'rightTextIsBtn',
     'border',
     'icon',
-    'backImmediateExec'
+    'backImmediateExec',
+    'bgColor',
+    'color'
   ],
   data() {
     return {
@@ -50,9 +59,10 @@ export default {
       defaultRightBtnShow:false,
       borderCSS:{
         boxSizing:'border-box',
-        borderBottom:'1px solid #e1e1e1'
+        borderBottom:'1px solid #e1e1e1',
       },
-      isIconShow:false
+      isIconShow:false,
+
     }
   },
   methods:{
@@ -73,6 +83,10 @@ export default {
     this.headerRightBtnTitle = this.rightBtnTitle || '右侧按钮';
 
     this.defaultRightBtnShow = this.isRightBtnShow;
+
+    this.bgColorCopy = this.bgColor || 'white';
+
+    this.colorCopy = this.color || '#202E3F';
     
     //如果icon属性传入，则会忽略右侧的其他所有配置，以icon属性为准
     if(this.icon) {
@@ -92,8 +106,8 @@ export default {
 <style lang='less'>
    .mint-header {
       height: 0.88rem;
-      background: white;
-      color:#222222;
+/*      background: white;
+      color:#222222;*/
       font-size: 0.38rem;
 
 
@@ -109,5 +123,9 @@ export default {
         width: 100%;
         height: 100%;
       }
+   }
+
+   .header-place {
+    height:0.88rem;
    }
 </style>

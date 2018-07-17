@@ -61,7 +61,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url(../../../../static/img/分期底@2x.png);
+        background: url(/static/img/分期底@2x.png);
         background-size: 100% 100%;
         height: 0.42rem;
         width: 2.35rem;

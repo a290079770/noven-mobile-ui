@@ -7,14 +7,14 @@ Vue.use(Router);
 /**-----------------将模块分开配置路由，有效避免多人开发路由文件冲突------------- */
 
 
-//登录、注册、忘记、修改密码等公共模块
-import LoginReg from "./LoginReg/index.js"; 
+//文档
+import Doc from "./Doc/index.js"; 
 
 //公共模块演示demo
 import Demo from "./Demo/index.js"; 
 
 const router =  new Router({
-  routes: [...Demo,...LoginReg],
+  routes: [...Demo,...Doc],
   //每次切换自动切换到目标位置，可自行打印参数
   scrollBehavior(to, from, savedPosition) {
     return { x: 0, y: 0 }

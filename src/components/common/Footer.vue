@@ -18,34 +18,34 @@ export default {
       tabList:[
         { 
           id:0,
-          title:'首页',
-          defaultIcon:'./static/img/商城icon@2x.png',
-          activeIcon:'./static/img/商城icon-on@2x.png',
-          path:'/index',
+          title:'资产',
+          defaultIcon:'/static/img/资产02.png',
+          activeIcon:'/static/img/资产01.png',
+          path:'/assetsIndex',
           query:{}
         },
         {
           id:1,
-          title:'分期商城',
-          defaultIcon:'./static/img/首页icon@2x.png',
-          activeIcon:'./static/img/首页icon-on@2x.png',
-          path:'/mallIndex',
+          title:'投资',
+          defaultIcon:'/static/img/投资02.png',
+          activeIcon:'/static/img/投资01.png',
+          path:'/investIndex',
           query:{}
         },
         {
           id:2,
-          title:'信用生活',
-          defaultIcon:'./static/img/信用icon@2x.png',
-          activeIcon:'./static/img/信用icon-on@2x.png',
-          path:'/creditLifeIndex',
+          title:'发现',
+          defaultIcon:'/static/img/发现02.png',
+          activeIcon:'/static/img/发现01.png',
+          path:'/discoverIndex',
           query:{}
         },
         {
           id:3,
           title:'我的',
-          defaultIcon:'./static/img/我的icon@2x.png',
-          activeIcon:'./static/img/我的icon-on@2x.png',
-          path:'/mine',
+          defaultIcon:'/static/img/我的02.png',
+          activeIcon:'/static/img/我的01.png',
+          path:'/userCenterIndex',
           query:{}
         },
       ]
@@ -68,14 +68,14 @@ export default {
     },
 
     '$route': function(to, from) {
-       let ShowFooterPathList = ['/index','/mallIndex','/creditLifeIndex','/mine'];
-
-       if(ShowFooterPathList.indexOf(this.$route.path) == -1) {
+       let ShowFooterPathList = ['/assetsIndex','/investIndex','/discoverIndex','/userCenterIndex'];
+       // console.log(this.$route)
+       if(ShowFooterPathList.indexOf(this.$route.matched[0].path) == -1) {
          this.showFooter = false;
        }else {
          //显示并处理当前选中
          this.showFooter = true;
-         this.selected = ShowFooterPathList.indexOf(this.$route.path)
+         this.selected = ShowFooterPathList.indexOf(this.$route.matched[0].path)
        }
     }
   }

@@ -1,24 +1,26 @@
 <template>
-  <section class="wj-scroll-item" @click="$router.push('/mallDetail')">
-     <figure class="wj-scroll-item-img">
+  <section class="wj-scroll-item" @click="$router.push('/mallDetail')" :style="{height:height}">
+     <figure class="wj-scroll-item-img" :style="{width:width,height:imgHeight,marginTop:'0.4rem'}">
         <img :src="data.img">
      </figure>
-     <p>{{data.title}}</p>
-     <section class="no-amortize-number" v-if="!data.hasAmortizeNumber">
-       <button>分期：{{data.price}}元起</button>
-     </section>
+     <div v-show="data.hasAmortizeNumber">
+       <p>{{data.title}}</p>
+       <section class="no-amortize-number" >
+         <button>分期：{{data.price}}元起</button>
+       </section>
 
-     <section class="has-amortize-number" v-if="data.hasAmortizeNumber">
-       <button> 
-          <span class="amortize-number">12期</span>
-          <span class="amortize-price">{{data.price}}元/期</span>
-      </button>
-     </section>
+       <section class="has-amortize-number">
+         <button> 
+            <span class="amortize-number">12期</span>
+            <span class="amortize-price">{{data.price}}元/期</span>
+        </button>
+       </section>
+     </div>
   </section>
 </template>
 <script>
 export default {
-  props:['data'],
+  props:['data','height','width','imgHeight'],
   data() {
     return {
 
@@ -74,7 +76,7 @@ export default {
           color: white;
           text-align: center;
           line-height: 0.44rem;
-          background: url(../../../../static/img/分期底@2x.png);
+          background: url(/static/img/分期底@2x.png);
           background-size: 100% 100%
         }
       }
@@ -93,7 +95,7 @@ export default {
           color: white;
           text-align: center;
           line-height: 0.42rem;
-          background: url(../../../../static/img/分期底@2x.png);
+          background: url(/static/img/分期底@2x.png);
           background-size: 100% 100%;
           .amortize-number {
              position: absolute;

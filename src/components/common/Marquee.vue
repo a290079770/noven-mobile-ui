@@ -1,17 +1,49 @@
 <template>
   <div class="wj-marquee" :style="{height:copyHeight + 'rem'}"> 
    <ul class="wj-marquee-content" :style="{top: top / 100 + 'rem'}">
-       <li v-for="(item,index) in copyMarqueeList" 
+       <li  v-for="(item,index) in copyMarqueeList" 
        :style="{height:copyHeight + 'rem',lineHeight:copyHeight + 'rem','-webkit-box-orient': 'vertical','box-orient': 'vertical' }"
        >
-          <a :href="item.redirectUrl" >{{item.lanternContent}}</a>
+          <a :class="textClass" :href="item[fields.redirectUrl] ? item[fields.redirectUrl] :'javascript:void(0)'" >{{item[fields.text]}}</a>
        </li>
    </ul>
   </div>
 </template>
 <script>
 export default {
-   props:['marqueeList','height'],
+   props:{
+     marqueeList:{
+       type:Array,
+       default:[]
+     },
+     height:{
+       type:String,
+       default:() =>{
+         return []
+       }
+     },
+     fields:{
+       type:Object,
+       default:() =>{
+         return {
+           redirectUrl:'redirectUrl',
+           text:'lanternContent'
+         }
+       }
+     },
+     textClass:{
+       type:String,
+       default:''
+     },
+     speed:{ //切换过程中的速度
+       type:Number,
+       default:5
+     },
+     duration:{  //切换的间隔时间
+       type:Number,
+       default:2500
+     },
+   },
    data () {
     return {
 			copyMarqueeList:[],//底部基本数据
@@ -19,8 +51,6 @@ export default {
       top:-50,  //定义走马灯上下滚动
       scrollIndex:0,  //滚动的索引
       percent:50,   //每次滚动的距离，如果是移动端，50 == 1rem
-      duration:2500,  //切换的间隔时间
-      speed:5,   //切换过程中的速度
       copyHeight:0.5, //走马灯的高度
     }
   },
@@ -69,7 +99,6 @@ export default {
   },
   mounted(){
     this.scrolling();
-
     //处理定时器切换tab被中断的bug
     document.addEventListener("visibilitychange", ()=> {
       if(document.hidden === true) {
@@ -125,7 +154,7 @@ export default {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      color:#999;
+      color:#202E3F;
    }
 </style>
 

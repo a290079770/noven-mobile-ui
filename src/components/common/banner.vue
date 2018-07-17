@@ -1,29 +1,19 @@
 <template>
-  <div class="banner" :style="defaultType == 'index' ? indexCssText : detailCssText">
-     <mt-swipe :auto="3000" >
+  <div :class="defaultType == 'index' ? 'index-dots' : 'detail-dots'" :style="defaultType == 'index' ? indexCssText : detailCssText">
+     <mt-swipe :auto="0" >
         <mt-swipe-item v-for="(item,index) in defaultBannerList" :key="index">
           <a :href="item.url ? item.url : 'javascript:void(0)'">
-            <img :src="item.img">
+            <img :src="item.picturePath">
           </a>
         </mt-swipe-item>
      </mt-swipe>
   </div>
 </template>
 <script>
-// import { Swiper,SwiperItem} from 'vux'
 export default {
   props:['bannerList','type'],
   data() {
     return {
-      // bannerList:[
-      //    { url: 'javascript:', 
-      //      img: '/static/img/ic_mine_bg@2x.png',
-      //      title: '送你一朵fua' },
-      //     { url: 'javascript:', 
-      //       img: '/static/img/ic_mine_bg@2x.png',
-      //       title: '送你一次旅行',
-      //     }
-      //  ],
       defaultBannerList:[],
       // type:'index',   //banner类型，index - 首页的  detail - 详情的
       defaultType:'index',
@@ -40,30 +30,41 @@ export default {
     this.defaultBannerList = this.bannerList || [];
   },
   mounted() {
-    //根据不同的类型，附加上不同的class
-    if(this.defaultType == 'index') {
-       document.querySelector('.mint-swipe-indicators').classList.add('index-dots')
-    }else {
-       document.querySelector('.mint-swipe-indicators').classList.add('detail-dots')
-    }
   },
+  watch:{
+    'bannerList':function(nv) {
+      this.defaultBannerList = nv || [];
+      //根据不同的类型，附加上不同的class
+      // this.$nextTick(()=>{
+      //   if(this.defaultType == 'index') {
+      //     console.log(11);
+      //      document.querySelector('.mint-swipe-indicators').className += ' index-dots';
+      //      console.log(document.querySelector('.mint-swipe-indicators'));
+      //   }else {
+      //     console.log(222);
+      //      document.querySelector('.mint-swipe-indicators').className += ' detail-dots';
+
+      //      console.log(document.querySelector('.mint-swipe-indicators'));
+      //   }
+      // })
+    }
+  }
 }
 
 </script>
 <style lang='less'>
    .banner {
      width: 100%;
+
    }
 
-   .vux-swiper {
-     .vux-img {
+   .mint-swipe-item img {
       width: 100%;
-      height: 100%;
-     }
+      height: 100%
    }
 
    .mint-swipe-indicators {
-    bottom:0.4rem;
+     bottom:0.4rem;
    }
 
    .mint-swipe-indicator {
@@ -79,12 +80,12 @@ export default {
       border: none;
    }
 
-   .index-dots .is-active {
+   .index-dots .mint-swipe-indicators .is-active {
       width: 0.48rem !important;
       background: white !important;
    }
 
-   .detail-dots {
+   .detail-dots .mint-swipe-indicators {
        display: flex;
        justify-content: flex-start;
        align-items: center;
@@ -96,7 +97,7 @@ export default {
       background: #aeadad !important;
    }
 
-   .detail-dots .is-active {
+   .detail-dots .mint-swipe-indicators .is-active {
       width: 0.16rem !important;
       height: 0.16rem !important;
       border-radius: 50% !important;

@@ -9,7 +9,7 @@
       <div class="shop-model-title">
         <p>请选择商品属性</p>
         <span class="close fr" @click="submitSelected">
-          <img src="../../../assets/images/ic-close@2x.png" alt="">
+          <img src="/static/img/ic-close@2x.png" alt="">
         </span>
       </div>
 
@@ -18,7 +18,7 @@
 
          <section>
             <figure>
-              <img src="../../../assets/images/detail-commodity.png">
+              <img src="/static/img/detail-commodity.png">
             </figure>
 
             <section class="selected-commo-info">
@@ -388,21 +388,5 @@ export default {
       padding-top: 0;
       margin-top: -0.1rem;
    }
-
-
-
-   .wj-btn-primary {
-      text-align: center;
-      padding-top:1rem;
-      button{
-          display: inline-block;
-          background: url(../../../../static/img/ic_button@2x.png) left center no-repeat;
-          background-size:6.80rem 1.52rem;
-          width:6.80rem;
-          height:1.52rem;
-          font-size: .34rem;
-          color: #FFFFFF;
-      }
-    }
 
 </style>
