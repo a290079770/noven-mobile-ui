@@ -21,7 +21,7 @@ import Marquee from './Marquee.vue'
 import MsgCode from './MsgCode/MsgCode.vue'
 
 //获取验证码
-import InputCode from './InputCode/InputCode.vue'
+import VerificationCode from './VerificationCode/VerificationCode.vue'
 
 //引入封装的Input框
 import Input from './Input/Input.vue'
@@ -81,7 +81,7 @@ export default {
            {Title:'Scroll',Component:Scroll},
            {Title:'Header',Component:Header},
            {Title:'MsgCode',Component:MsgCode},
-           {Title:'InputCode',Component:InputCode},
+           {Title:'VerificationCode',Component:VerificationCode},
            {Title:'Input',Component:Input},
            {Title:'Default',Component:Default},
            {Title:'SelectCommodity',Component:SelectCommodity},

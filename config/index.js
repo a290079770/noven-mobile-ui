@@ -24,8 +24,8 @@ module.exports = {
 
 
 
-    host: 'localhost', // luowen
-    // host: '192.168.111.223', // luowen
+    // host: 'localhost', // luowen
+    host: '192.168.102.183', // luowen
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,

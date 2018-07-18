@@ -2,9 +2,9 @@
   <div>
      <Header 
      :isBackShow="true" 
-     :backImmediateExec="true"
      :title="'走马灯'"
      :border="true"
+     @backClick="$router.push('/demo')"
      />
 
      
@@ -15,8 +15,6 @@
      </section>
 
    <h4>展示</h4>
-
-   <p class="show-text">有背景图片</p>
 
    
    <div style="width:94%;margin:0 auto">

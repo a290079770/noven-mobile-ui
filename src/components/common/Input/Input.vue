@@ -1,5 +1,6 @@
 <template>
    <input 
+   :class="customClass || ''"
    :type="type && ['text','number','password'].indexOf(type) !== -1 ? type : 'text'"  
    :placeholder="placeholder ? placeholder:'请输入...'"
    :maxlength="maxLength ? maxLength : ''"
@@ -9,7 +10,7 @@
 </template>
 <script>
 export default {
-  props:['type','placeholder','maxLength','forbid','value'],
+  props:['type','placeholder','maxLength','forbid','value','customClass'],
   data() {
     return {
       input:this.value || '',

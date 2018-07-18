@@ -1,5 +1,5 @@
 <template>
-   <button :class="buttonClass + ' ' + themeClass" @click="nativeClick($event)">
+   <button :class="buttonClass + ' ' + customClass" @click="nativeClick($event)">
      <slot/>
    </button>
 </template>
@@ -18,7 +18,7 @@ export default {
       type:Boolean,
       default:false,
     },
-    themeClass:{
+    customClass:{
       type:String,
       default:'',
     },

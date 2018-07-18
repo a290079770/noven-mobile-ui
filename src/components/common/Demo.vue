@@ -35,15 +35,38 @@
      <table class="demo-list">
        <tbody>
          <tr>
-           <td @click="toPath('/header')">Header</td>
-           <td @click="toPath('/topBgImg')">TopBgImg</td>
-           <td @click="toPath('/marquee')">Marquee</td>
+           <td @click="toPath('/header')">Header<span>头部导航</span></td>
+           <td @click="toPath('/footer')">Footer<span>底部导航</span></td>
+           <td @click="toPath('/button')">Button<span>自定义按钮</span></td>
          </tr>
 
          <tr>
-           <td @click="toPath('/navMenu')">NavMenu</td>
-           <td @click="toPath('/topBgImg')">TopBgImg</td>
-           <td @click="toPath('/marquee')">Marquee</td>
+           <td @click="toPath('/input')">Input<span>文本输入框</span></td>
+           <td @click="toPath('/navMenu')">NavMenu<span>导航菜单</span></td>
+           <td @click="toPath('/swipeOut')">SwipeOut<span>左滑删除</span></td>
+         </tr>
+
+         <tr>
+           <td @click="toPath('/topBgImg')">TopBgImg<span>顶部容器背景</span></td>
+           <td @click="toPath('/marquee')">Marquee<span>走马灯</span></td>
+           <td @click="toPath('/msgCode')">MsgCode<span>获取验证码</span></td>
+         </tr>
+
+         <tr>
+           <td @click="toPath('/verificationCode')">VerificationCode<span>验证码</span></td>
+           <td @click="toPath('/selectCommodity')">SelectCommodity<span>商品sku选择框</span></td>
+           <td @click="toPath('/select')">Select<span>中部弹出框选择器</span></td>
+         </tr>
+
+         <tr>
+           <td @click="toPath('/expandMenu')">ExpandMenu<span>展开式菜单</span></td>
+           <td @click="toPath('/popupInput')">PopupInput<span>下部弹出式选择框</span></td>
+           <td @click="toPath('/bankItem')">BankItem<span>银行卡展示</span></td>
+         </tr>
+
+         <tr>
+           <td @click="toPath('/canvasCycle')">CanvasCycle<span>比例环形图</span></td>
+           <td @click="toPath('/calendar')">Calendar<span>日历插件</span></td>
          </tr>
        </tbody>
      </table>
@@ -58,7 +81,7 @@
      -->
      <TopBgImg
        height="5rem"
-       :bgImg="'/static/img/bg_home1@2x.png'"
+       :bgImg="'./static/img/bg_home1@2x.png'"
      >
         这里是内容区
      </TopBgImg>
@@ -134,7 +157,7 @@
       height  字符串 整个框的显示高度  — 60px
       -->
 
-     <InputCode 
+     <VerificationCode 
        span-size="0.2rem" 
        type="number" 
        :number="6" 
@@ -144,12 +167,14 @@
        input-size="0.24rem" 
        :code="code" 
        @complete="codeComplete"
-     ></InputCode>
+     ></VerificationCode>
 
      <button @click="selectShopModel = true">弹出商品</button>
 
 
-     <SelectCommodity :selectShopModel="selectShopModel" @submitSelected="receiveSelected"
+     <SelectCommodity 
+     :selectShopModel="selectShopModel" 
+     @submitSelected="receiveSelected"
      />
 
 
@@ -377,22 +402,22 @@ export default {
         }],
       bannerList:[
          { url: 'javascript:', 
-           img: '/static/img/ic_mine_bg@2x.png',
+           img: './static/img/ic_mine_bg@2x.png',
            title: '送你一朵fua' 
          },
           { url: 'javascript:', 
-            img: '/static/img/ic_mine_bg@2x.png',
+            img: './static/img/ic_mine_bg@2x.png',
             title: '送你一次旅行',
           }
        ],
 
       marqueeList: [
         { redirectUrl: 'javascript:', 
-           img: '/static/img/ic_mine_bg@2x.png',
+           img: './static/img/ic_mine_bg@2x.png',
            lanternContent: '送你一朵fua' 
          },
           { redirectUrl: 'javascript:', 
-           img: '/static/img/ic_mine_bg@2x.png',
+           img: './static/img/ic_mine_bg@2x.png',
            lanternContent: '送你一朵草' 
          },
       ],//走马灯数据
@@ -407,32 +432,32 @@ export default {
         { 
           id:0,
           title:'首页',
-          defaultIcon:'/static/img/商城icon@2x.png',
-          activeIcon:'/static/img/商城icon-on@2x.png',
+          defaultIcon:'./static/img/商城icon@2x.png',
+          activeIcon:'./static/img/商城icon-on@2x.png',
           path:'/',  //对应路由路径
           query:{}   //路由携带的参数
         },
         {
           id:1,
           title:'分期商城',
-          defaultIcon:'/static/img/首页icon@2x.png',
-          activeIcon:'/static/img/首页icon-on@2x.png',
+          defaultIcon:'./static/img/首页icon@2x.png',
+          activeIcon:'./static/img/首页icon-on@2x.png',
           path:'/',
           query:{}
         },
         {
           id:2,
           title:'信用生活',
-          defaultIcon:'/static/img/信用icon@2x.png',
-          activeIcon:'/static/img/信用icon-on@2x.png',
+          defaultIcon:'./static/img/信用icon@2x.png',
+          activeIcon:'./static/img/信用icon-on@2x.png',
           path:'/',
           query:{}
         },
         {
           id:3,
           title:'我的',
-          defaultIcon:'/static/img/我的icon@2x.png',
-          activeIcon:'/static/img/我的icon-on@2x.png',
+          defaultIcon:'./static/img/我的icon@2x.png',
+          activeIcon:'./static/img/我的icon-on@2x.png',
           path:'/',
           query:{}
         },
@@ -442,46 +467,46 @@ export default {
         { 
           price:2000.15,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png',
+          img:'./static/img/scrollitem.png',
           hasAmortizeNumber:true
         },
         { 
           price:200.5,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png',
+          img:'./static/img/scrollitem.png',
           hasAmortizeNumber:true
         },
         { 
           price:200.51,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png',
+          img:'./static/img/scrollitem.png',
           hasAmortizeNumber:true
         },
         { 
           price:200,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png',
+          img:'./static/img/scrollitem.png',
           hasAmortizeNumber:true
         },
         { 
           price:200,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png'
+          img:'./static/img/scrollitem.png'
         },
         { 
           price:200,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png'
+          img:'./static/img/scrollitem.png'
         },
         { 
           price:200,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png'
+          img:'./static/img/scrollitem.png'
         },
         { 
           price:200,
           title:'Apple苹果IphoneX现货9999元128G',
-          img:'/static/img/scrollitem.png'
+          img:'./static/img/scrollitem.png'
         },
       ],
 
@@ -489,19 +514,19 @@ export default {
       mailData:{
         title:'华为HUAWEI Mate 10 Pro 现货分期',
         price:2001.88,
-        img:'/static/img/mailItem.png'
+        img:'./static/img/mailItem.png'
       },  //商城item的数据
       recommendData:{
         title:'华为HUAWEI Mate 10 Pro 现货分期 Apple Iphone 1 Plus 128G 红色特别版 移动联通电信',
         price:2001.88,
-        img:'/static/img/recommendItem.png'
+        img:'./static/img/recommendItem.png'
       },  //商城item的数据
 
       //头部右侧icon配置
       icon:{
          width:'0.4rem',
          height: '0.45rem',
-         src:'/static/img/recommendItem.png'
+         src:'./static/img/recommendItem.png'
       },
 
       code:[], //用户输入的验证码
@@ -520,7 +545,7 @@ export default {
           title:'万家金服',
           number:2,
           numberColor:['#ffd662','#ffb034'],
-          logo:'/static/img/img_互联网金融1.png',
+          logo:'./static/img/img_互联网金融1.png',
           isExpand:false,
           centerList:[
             {key:'待收本金',value:'30,000.00元'},
@@ -559,17 +584,14 @@ export default {
 
       isPopupInputShow:false,
 
-      popupInputList:{
-        title:'选择录入方式',
-        list:[
-          {
-            action:'自动录入',
-          },
-          {
-            action:'手动录入',
-          }
-        ]
-      },
+      popupInputList:[
+        {
+          action:'自动录入',
+        },
+        {
+          action:'手动录入',
+        }
+      ],
 
 
       bankList:[
@@ -740,12 +762,26 @@ export default {
 
 
    .demo-list td {
+    position: relative;
     width: 33.3%;
+    word-wrap:break-word;
+    word-break:break-all;
     height: calc(0.33 * 100vw * 0.9);
     text-align: center;
     border: 1px solid #dedede;
     box-sizing: border-box;
     font-size: 0.4rem;
+    color:#10d0b8;
+
+    span {
+       position: absolute;
+       bottom: 0.3rem;
+       left: 0;
+       width: 100%;
+       font-size: 0.24rem;
+       text-align: center;
+       color:#75a1fe;
+    }
    }
 
   //覆盖日历组件样式

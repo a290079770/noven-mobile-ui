@@ -9,7 +9,7 @@
       <div class="shop-model-title">
         <p>请选择商品属性</p>
         <span class="close fr" @click="submitSelected">
-          <img src="/static/img/ic-close@2x.png" alt="">
+          <img :src="'./static/img/ic-close@2x.png'" alt="">
         </span>
       </div>
 
@@ -18,7 +18,7 @@
 
          <section>
             <figure>
-              <img src="/static/img/detail-commodity.png">
+              <img :src="'./static/img/detail-commodity.png'">
             </figure>
 
             <section class="selected-commo-info">
@@ -70,7 +70,7 @@
 
       <section class="select-confirm-btn">
         <div class="wj-btn-primary commodity-padding">
-          <button type="button" @click="submitSelected">提交订单</button>
+          <button :style="{background: 'url(' + './static/img/ic_button@2x.png'+') no-repeat'}" type="button" @click="submitSelected">提交订单</button>
         </div>
       </section>
     </div>

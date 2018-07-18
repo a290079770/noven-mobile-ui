@@ -1,218 +1,222 @@
 export default [
   {
     bankname:"中国工商银行",
-    bankLogo:'/static/img/bankIcon/red/ic_gongshang.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_gongshang@2x.png',
+    bankLogo:'./static/img/bankIcon/red/ic_gongshang.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_gongshang@2x.png',
     class:'red',
     startColor:'#ff9581',
     endColor:'#ff7483'
  },{
     bankname:"中国农业银行",
-    bankLogo:'/static/img/bankIcon/green/ic_nongye.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_nongye@2x.png',
+    bankLogo:'./static/img/bankIcon/green/ic_nongye.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_nongye@2x.png',
     class:'green',
     startColor:'#1cbfaf',
     endColor:'#1b98b8'
 },{
     bankname:"中国建设银行",
-    bankLogo:'/static/img/bankIcon/green/ic_jianshe.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_jianshe@2x.png',
+    bankLogo:'./static/img/bankIcon/green/ic_jianshe.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_jianshe@2x.png',
     class:'green',
     startColor:'#1cbfaf',
     endColor:'#1b98b8'
 },{
     bankname:"招商银行",
-    bankLogo:'/static/img/bankIcon/red/ic_zhaoshang.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_zhaoshang@2x.png',
+    bankLogo:'./static/img/bankIcon/red/ic_zhaoshang.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_zhaoshang@2x.png',
     class:'red',
     startColor:'#ff9581',
     endColor:'#ff7483'
 },{
     bankname:"交通银行",
-    bankLogo:'/static/img/bankIcon/green/ic_jiaotong.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_jiaotong@2x.png',
+    bankLogo:'./static/img/bankIcon/green/ic_jiaotong.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_jiaotong@2x.png',
     class:'green',
     startColor:'#1cbfaf',
     endColor:'#1b98b8'
 },{
     bankname:"广发银行",
-    bankLogo:'/static/img/bankIcon/red/ic_guangfa.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_guangfa@2x.png',
+    bankLogo:'./static/img/bankIcon/red/ic_guangfa.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_guangfa@2x.png',
     class:'red',
     startColor:'#ff9581',
     endColor:'#ff7483'
 },{
     bankname:"平安银行",
-    bankLogo:'/static/img/bankIcon/yellow/ic_pingan.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_pingan@2x.png',
+    bankLogo:'./static/img/bankIcon/yellow/ic_pingan.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_pingan@2x.png',
     class:'yellow',
     startColor:'#f9d06d',
     endColor:'#fa9958'
 },{
     bankname:"浦东发展银行",
-    bankLogo:'/static/img/bankIcon/green/ic_pufa.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_pufa@2x.png',
+    bankLogo:'./static/img/bankIcon/green/ic_pufa.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_pufa@2x.png',
     class:'green',
     startColor:'#1cbfaf',
     endColor:'#1b98b8'
 },{
     bankname:"民生银行",
-    bankLogo:'/static/img/bankIcon/green/ic_minsheng.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_minsheng@2x.png',
+    bankLogo:'./static/img/bankIcon/green/ic_minsheng.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_minsheng@2x.png',
     class:'green',
     startColor:'#1cbfaf',
     endColor:'#1b98b8'
 },{
     bankname:"光大银行",
-    bankLogo:'/static/img/bankIcon/yellow/ic_guangda.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_guangda@2x.png',
+    bankLogo:'./static/img/bankIcon/yellow/ic_guangda.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_guangda@2x.png',
     class:'yellow',
     startColor:'#f9d06d',
     endColor:'#fa9958'
 },{
     bankname:"兴业银行",
-    bankLogo:'/static/img/bankIcon/green/ic_xingye.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_xingye@2x.png',
+    bankLogo:'./static/img/bankIcon/green/ic_xingye.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_xingye@2x.png',
     class:'green',
     startColor:'#1cbfaf',
     endColor:'#1b98b8'
 },{
     bankname:"中信银行",
-    bankLogo:'/static/img/bankIcon/red/ic_zhongxin.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_zhongxin@2x.png',
+    bankLogo:'./static/img/bankIcon/red/ic_zhongxin.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_zhongxin@2x.png',
     class:'red',
     startColor:'#ff9581',
     endColor:'#ff7483'
 },{
     bankname:"华夏银行",
-    bankLogo:'/static/img/bankIcon/red/ic_huaxia.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_huaxia@2x.png',
+    bankLogo:'./static/img/bankIcon/red/ic_huaxia.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_huaxia@2x.png',
     class:'red',
     startColor:'#ff9581',
     endColor:'#ff7483'
 },{
     bankname:"杭州银行",
-    bankLogo:'/static/img/bankIcon/green/ic_hangzhou.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_hangzhou@2x.png',
+    bankLogo:'./static/img/bankIcon/green/ic_hangzhou.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_hangzhou@2x.png',
     class:'green',
     startColor:'#1cbfaf',
     endColor:'#1b98b8'
 },{
     bankname:"北京银行",
-    bankLogo:'/static/img/bankIcon/red/ic_beijing.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_beijing@2x.png',
+    bankLogo:'./static/img/bankIcon/red/ic_beijing.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_beijing@2x.png',
     class:'red',
     startColor:'#ff9581',
     endColor:'#ff7483'
 },{
     bankname:"浙商银行",
-    bankLogo:'/static/img/bankIcon/yellow/ic_zheshang.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_zheshang@2x.png',
+    bankLogo:'./static/img/bankIcon/yellow/ic_zheshang.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_zheshang@2x.png',
     class:'yellow',
     startColor:'#f9d06d',
     endColor:'#fa9958'
-},{
-    bankname:"上海银行",
-    bankLogo:'/static/img/bankIcon/ic_shanghai.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_shanghai@2x.png',
-},{
+},
+// {
+//     bankname:"上海银行",
+//     bankLogo:'./static/img/bankIcon/ic_shanghai.png',
+//     bankfullLogo:'./static/img/bankIcon/2x/ic_shanghai@2x.png',
+// },
+{
     bankname:"广州银行",
-    bankLogo:'/static/img/bankIcon/red/ic_guangzhou.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_guangzhou@2x.png',
+    bankLogo:'./static/img/bankIcon/red/ic_guangzhou.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_guangzhou@2x.png',
     class:'red',
     startColor:'#ff9581',
     endColor:'#ff7483'
 },{
     bankname:"东莞农村商业银行",
-    bankLogo:'/static/img/bankIcon/red/ic_dongguannongcun.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_dongguannongcun@2x.png',
+    bankLogo:'./static/img/bankIcon/red/ic_dongguannongcun.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_dongguannongcun@2x.png',
     class:'red',
     startColor:'#ff9581',
     endColor:'#ff7483'
 },{
     bankname:"广东省农村信用联合社",
-    bankLogo:'/static/img/bankIcon/yellow/ic_guangdongnongxin.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_guangdong_xinhezuoshe@2x.png',
+    bankLogo:'./static/img/bankIcon/yellow/ic_guangdong_xinhezuoshe.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_guangdong_xinhezuoshe@2x.png',
     class:'yellow',
     startColor:'#f9d06d',
     endColor:'#fa9958',
 },{
     bankname:"广州农村商业银行",
-    bankLogo:'/static/img/bankIcon/yellow/ic_guangzhou_nongshang.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_guangzhou_nongshang@2x.png',
+    bankLogo:'./static/img/bankIcon/yellow/ic_guangzhou_nongshang.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_guangzhou_nongshang@2x.png',
     class:'yellow',
     startColor:'#f9d06d',
     endColor:'#fa9958'
 },{
     bankname:"深圳农村商业银行",
-    bankLogo:'/static/img/bankIcon/green/ic_shenzhen_nongye.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_shenzhen_nongye@2x.png',
+    bankLogo:'./static/img/bankIcon/green/ic_shenzhen_nongye.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_shenzhen_nongye@2x.png',
     class:'green',
     startColor:'#1cbfaf',
     endColor:'#1b98b8'
 },{
     bankname:"宁波银行",
-    bankLogo:'/static/img/bankIcon/yellow/ic_ningbo.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_ningbo@2x.png',
+    bankLogo:'./static/img/bankIcon/yellow/ic_ningbo.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_ningbo@2x.png',
     class:'yellow',
     startColor:'#f9d06d',
     endColor:'#fa9958'
 },{
     bankname:"甘肃省农村信用联合社",
-    bankLogo:'/static/img/bankIcon/green/ic_gansu_nongxin.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_gansu_nongxin@2x.png',
+    bankLogo:'./static/img/bankIcon/green/ic_gansu_nongxin.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_gansu_nongxin@2x.png',
     class:'green',
     startColor:'#1cbfaf',
     endColor:'#1b98b8'
 },{
     bankname:"中国银行",
-    bankLogo:'/static/img/bankIcon/red/ic_zhonggu.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_zhonggu@2x.png',
+    bankLogo:'./static/img/bankIcon/red/ic_zhonggu.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_zhonggu@2x.png',
     class:'red',
     startColor:'#ff9581',
     endColor:'#ff7483'
 },{
     bankname:"江苏长江商业银行",
-    bankLogo:'/static/img/bankIcon/red/ic_suzhou_changshan.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_suzhou_changshan@2x.png',
+    bankLogo:'./static/img/bankIcon/red/ic_suzhou_changshan.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_suzhou_changshan@2x.png',
     class:'red',
     startColor:'#ff9581',
     endColor:'#ff7483'
-},{
-    bankname:"黑龙江省农村信用联合社",
-    bankLogo:'/static/img/bankIcon/ic_heilongjiang_xinhezuoshe.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_heilongjiang_nongxin@2x.png',
-    class:'green'
-},{
+},
+// {
+//     bankname:"黑龙江省农村信用联合社",
+//     bankLogo:'./static/img/bankIcon/ic_heilongjiang_xinhezuoshe.png',
+//     bankfullLogo:'./static/img/bankIcon/2x/ic_heilongjiang_nongxin@2x.png',
+//     class:'green'
+// },
+{
     bankname:"恒丰银行",
-    bankLogo:'/static/img/bankIcon/yellow/ic_hengfeng.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_hengfeng@2x.png',
+    bankLogo:'./static/img/bankIcon/yellow/ic_hengfeng.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_hengfeng@2x.png',
     class:'yellow',
     startColor:'#f9d06d',
     endColor:'#fa9958'
 },{
     bankname:"广东南粤银行",
-    bankLogo:'/static/img/bankIcon/red/ic_guangdong_nanyue.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_guangdong_nanyue@2x.png',
+    bankLogo:'./static/img/bankIcon/red/ic_guangdong_nanyue.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_guangdong_nanyue@2x.png',
     class:'red',
     startColor:'#ff9581',
     endColor:'#ff7483'
 },{
     bankname:"东莞银行",
-    bankLogo:'/static/img/bankIcon/red/ic_dongguan.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_dongguan@2x.png',
+    bankLogo:'./static/img/bankIcon/red/ic_dongguan.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_dongguan@2x.png',
     class:'red'
 },{
     bankname:"武汉农村商业银行",
-    bankLogo:'/static/img/bankIcon/red/ic_huhan_nongshang.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_huhan_nongshang@2x.png',
+    bankLogo:'./static/img/bankIcon/red/ic_huhan_nongshang.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_huhan_nongshang@2x.png',
     class:'red',
     startColor:'#ff9581',
     endColor:'#ff7483'
 },{
     bankname:"中国邮政储蓄银行",
-    bankLogo:'/static/img/bankIcon/green/ic_youzheng.png',
-    bankfullLogo:'/static/img/bankIcon/2x/ic_youzheng@2x.png',
+    bankLogo:'./static/img/bankIcon/green/ic_youzheng.png',
+    bankfullLogo:'./static/img/bankIcon/2x/ic_youzheng@2x.png',
     class:'green',
     startColor:'#1cbfaf',
     endColor:'#1b98b8'

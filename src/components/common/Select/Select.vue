@@ -42,4 +42,42 @@ export default {
 
 </script>
 
+<style lang="less">
+.mint-popup {
+  background: transparent !important;
+} 
+
+.mint-popup-bottom {
+  background: white !important;
+}
+
+.choice-section {
+   width:6rem;
+   height: auto;
+   min-height: 1rem;
+   max-height: 10rem;
+   overflow: auto;
+   background: white;
+   border-radius: .2rem;
+   
+   p,li {
+     text-align: center;
+     height: 1rem;
+     line-height: 1rem;
+   }   
+
+   p {
+    font-weight: 600;
+    font-size: 0.4rem;
+   }
+
+   li {
+    border-top: 1px solid #ccc;
+   }      
+}
+
+
+.mint-tab-item-label {
+  font-size: 0.3rem !important;
+}
 </style>

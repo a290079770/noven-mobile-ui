@@ -13,51 +13,28 @@ export default {
   props:['footerList'],
   data() {
     return {
-      selected:'0',
+      selected: -1,
       showFooter:true,
-      tabList:[
-        { 
-          id:0,
-          title:'资产',
-          defaultIcon:'/static/img/资产02.png',
-          activeIcon:'/static/img/资产01.png',
-          path:'/assetsIndex',
-          query:{}
-        },
-        {
-          id:1,
-          title:'投资',
-          defaultIcon:'/static/img/投资02.png',
-          activeIcon:'/static/img/投资01.png',
-          path:'/investIndex',
-          query:{}
-        },
-        {
-          id:2,
-          title:'发现',
-          defaultIcon:'/static/img/发现02.png',
-          activeIcon:'/static/img/发现01.png',
-          path:'/discoverIndex',
-          query:{}
-        },
-        {
-          id:3,
-          title:'我的',
-          defaultIcon:'/static/img/我的02.png',
-          activeIcon:'/static/img/我的01.png',
-          path:'/userCenterIndex',
-          query:{}
-        },
-      ]
+      tabList:[]
+    }
+  },
+  methods:{
+    setActiveTab() {
+      let activePath = this.$route.path;
+
+      for(let i = 0 ; i < this.tabList.length ; i ++) {
+         if(this.tabList[i].path.indexOf(activePath) !== -1) {
+            this.selected = i;
+            break;
+         }
+      }
     }
   },
   created() {
     this.tabList =  this.footerList ||  this.tabList;
-
-
   },
   mounted() {
-
+    this.setActiveTab();
   },
   watch:{
     'selected':function(val) {
@@ -67,17 +44,13 @@ export default {
       })
     },
 
-    '$route': function(to, from) {
-       let ShowFooterPathList = ['/assetsIndex','/investIndex','/discoverIndex','/userCenterIndex'];
-       // console.log(this.$route)
-       if(ShowFooterPathList.indexOf(this.$route.matched[0].path) == -1) {
-         this.showFooter = false;
-       }else {
-         //显示并处理当前选中
-         this.showFooter = true;
-         this.selected = ShowFooterPathList.indexOf(this.$route.matched[0].path)
-       }
-    }
+    // '$route': function(to, from) {
+    //    let ShowFooterPathList = ['/assetsIndex','/investIndex','/discoverIndex','/userCenterIndex'];
+
+    //    //显示并处理当前选中
+    //    this.showFooter = true;
+    //    this.selected = ShowFooterPathList.indexOf(this.$route.matched[0].path)
+    // }
   }
 }
 

@@ -1,22 +1,7 @@
 <template>
   <div>
-    <!-- 
-     isBackShow 是否显示返回按钮
-     backImmediateExec 点击返回按钮直接返回上一页，不会执行backClick的回调
-     isRightBtnShow 是否显示右侧按钮  默认false
-     title 顶部标题  默认‘标题’
-     bgColor 背景色  默认‘white’
-     color 字体色  默认‘202E3F’
-     rightTextIsBtn 右侧是否是按钮，如果是按钮就需要回调函数
-     rightBtnTitle 右侧按钮的文字  默认‘右侧按钮’
-     backClick 点击返回按钮的回调函数
-     rightBtnClick 点击右侧按钮的回调函数
-     border 决定显示下边框
-     icon 右侧展示一个icon，配置见例
-      -->
      <Header 
      :isBackShow="true" 
-     :backImmediateExec="true"
      :isRightBtnShow="true"
      bgColor="white"
      color="black"
@@ -25,7 +10,7 @@
      :rightTextIsBtn="true"
      :border="true"
      :icon="icon"
-     @backClick="backClick" 
+     @backClick="$router.push('/demo')" 
      @rightBtnClick="rightBtnClick"
      />
 
@@ -63,7 +48,7 @@
     icon:{
      width:'0.4rem',
      height: '0.45rem',
-     src:'/static/img/recommendItem.png'
+     src:'./static/img/recommendItem.png'
     },
    }
   }
@@ -189,7 +174,7 @@ export default {
       icon:{
          width:'0.4rem',
          height: '0.45rem',
-         src:'/static/img/recommendItem.png'
+         src:'./static/img/recommendItem.png'
       },
     }
   },

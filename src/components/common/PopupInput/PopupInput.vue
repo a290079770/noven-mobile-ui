@@ -5,12 +5,14 @@
     :closeOnClickModal="false"
     >
 
-    <section class="input-type">
-      <section class="input-top">
-        <div>
-          {{popupInputList.title}} 
+    <section :class="'input-type ' + customClass" @touchmove.stop.prevent="">
+      <section class="input-top" >
+        <div class="input-top-header">
+          {{headerText}} 
         </div>
-        <section  @click="inputType(index)" v-for="(item,index) in popupInputList.list">{{item.action}}</section>
+        <div class="input-top-cont">
+          <section  @click="inputType(index)" v-for="(item,index) in popupInputList">{{item[label]}}</section>
+        </div>
       </section>
 
       <section class="input-bottom" @click="inputType(-1)">
@@ -22,20 +24,27 @@
 <script>
 export default {
   props:{
+    headerText:{
+      type:String,
+      default:'选择',
+    },
     isPopupInputShow:{
       type:Boolean,
       default:false,
     },
     popupInputList:{
-      title:'选择录入方式',
-      list:[
-        {
-          action:'自动录入',
-        },
-        {
-          action:'手动录入',
-        }
-      ]
+      type:Array,
+      default:()=>{
+        return []
+      },
+    },
+    label:{
+      type:String,
+      default:'title',
+    },
+    customClass:{
+      type:String,
+      default:'',
     }
   },
   data() {
@@ -69,7 +78,7 @@ export default {
   .input-type {
     letter-spacing: 0.03rem;
     width: 7.1rem;
-    height: 4.7rem;
+    min-height: 2.7rem;
     color:#007AFF;
     font-size: 0.32rem;
     text-align: center;
@@ -77,16 +86,21 @@ export default {
     .input-top {
       margin-bottom: 0.15rem;
       width: 100%;
-      height: 3.2rem;
+      min-height: 1.14rem;
       border-radius: 0.26rem;
       background: #e6e6e6;
 
-      div {
+      .input-top-header {
         width: 100%;
         height: 0.88rem;
         line-height: 0.88rem;
         color:#6f7882;
         font-size: 0.26rem;
+      }
+
+      .input-top-cont {
+        max-height: 75vh;
+        overflow-y: auto;
       }
 
       section {
@@ -99,6 +113,7 @@ export default {
     }
 
     .input-bottom {
+      margin-bottom: 0.15rem;
       width: 100%;
       height: 1.14rem;
       border-radius: 0.26rem;

@@ -19,25 +19,27 @@
             </p>
           </section>
           <section class="expand-menu-content-right" @click="expand">
-            <img :src="'/static/img/ic_arrow_m@2x.png'"  :style="{transform:`rotate(${data.isExpand ? '-90deg':'90deg'})`,width:'0.15rem'}">
+            <img :src="'./static/img/ic_arrow_m@2x.png'"  :style="{transform:`rotate(${data.isExpand ? '-90deg':'90deg'})`,width:'0.15rem'}">
           </section>
        </section>
     </section>
     <!-- 折叠菜单 -->
-    <ul class="expand-children" v-show="isChildrenListShow">
-       <li v-for="(item,index) in data.children" @click="$emit('onExpandItemClick',{item,index})">
-         <h3 >
-           <span :style="{borderLeft:'0.04rem solid '+ item.borderLeftColor}">{{item.title}}</span>
-           <i>{{item.right}}</i>
-         </h3>
-         <ul>
-           <li v-for="(citem,cindex) in item.itemList">
-             <p>{{citem.value}}</p>
-             <p>{{citem.key}}</p>
-           </li>
-         </ul>
-       </li>
-    </ul>
+    <slot v-if="isChildrenListShow">
+      <ul class="expand-children" >
+         <li v-for="(item,index) in data.children" @click="$emit('onExpandItemClick',{item,index})">
+           <h3 >
+             <span :style="{borderLeft:'0.04rem solid '+ item.borderLeftColor}">{{item.title}}</span>
+             <i>{{item.right}}</i>
+           </h3>
+           <ul>
+             <li v-for="(citem,cindex) in item.itemList">
+               <p>{{citem.value}}</p>
+               <p>{{citem.key}}</p>
+             </li>
+           </ul>
+         </li>
+      </ul>
+    </slot>  
   </section>
 </template>
 <script>

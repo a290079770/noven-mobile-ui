@@ -2,9 +2,9 @@
   <div>
      <Header 
      :isBackShow="true" 
-     :backImmediateExec="true"
      :title="'顶部容器背景'"
      :border="true"
+     @backClick="$router.push('/demo')"
      />
 
      
@@ -20,7 +20,7 @@
    <TopBgImg
        style="margin:0.2rem 0"
        height="5rem"
-       :bgImg="'/static/img/bg_home1@2x.png'"
+       :bgImg="'./static/img/bg_home1@2x.png'"
      >
       这里是内容区
    </TopBgImg>
@@ -29,7 +29,7 @@
    <TopBgImg
        style="margin:0.2rem 0"
        height="5rem"
-       :bgImg="'/static/img/bg_home1@2x.png'"
+       :bgImg="'./static/img/bg_home1@2x.png'"
        bgColorStart="red"
        bgColorEnd="pink"
      >
@@ -40,7 +40,7 @@
    <TopBgImg
        style="margin:0.2rem 0"
        height="5rem"
-       :bgImg="'/static/img/bg_home1@2x.png'"
+       :bgImg="'./static/img/bg_home1@2x.png'"
        bgColorStart="yellow"
        bgColorEnd="green"
        direction="left bottom"
@@ -53,7 +53,7 @@
 
    &lt;<span class="tag-name">TopBgImg</span> 
        <span class="tag-attr">height</span>=<span class="tag-value">"5rem"</span> 
-       <span class="tag-attr">:bgImg</span>=<span class="tag-value">"'/static/img/bg_home1@2x.png'"</span> 
+       <span class="tag-attr">:bgImg</span>=<span class="tag-value">"'./static/img/bg_home1@2x.png'"</span> 
        <span class="tag-attr">bgColorStart</span><span class="tag-value">="yellow"</span> 
        <span class="tag-attr">bgColorEnd</span><span class="tag-value">="green"</span> 
        <span class="tag-attr">direction</span>=<span class="tag-value">"left bottom"</span> 
@@ -127,7 +127,7 @@ export default {
       icon:{
          width:'0.4rem',
          height: '0.45rem',
-         src:'/static/img/recommendItem.png'
+         src:'./static/img/recommendItem.png'
       },
     }
   },

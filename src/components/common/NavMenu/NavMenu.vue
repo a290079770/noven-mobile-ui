@@ -7,7 +7,7 @@
         v-for="(item,index) in navData" 
         @click="selectChange(item,index,type)"
         >
-          {{item.title}}
+          {{item[defaultKey]}}
         </li>
 
         
@@ -15,7 +15,6 @@
       </ul>
 
     </div>
-
 
 
  
@@ -27,7 +26,7 @@
         v-for="(item,index) in navData" 
         @click="selectChange(item,index,type)"
         >
-          {{item.title}}
+          {{item[defaultKey]}}
         </li>
 
         
@@ -39,16 +38,27 @@
 <script>
 export default {
   props:{
+
     navData:{
       type:Array,
       default:() =>{
         return []
       }
     },
+    defaultKey:{
+      type:String,
+      default:'title'
+    },
+    defaultIndex:{
+      type:Number,
+      default:0
+    },
+    //模式  normal - 正常页内切换，刷新重置    hash - 页面切换，刷新不重置
     type:{
       type:String,
-      default:'hash'
+      default:'normal'
     },
+    //normal模式下 页面切换速度
     speed:{
       type:Number,
       default:0.5
@@ -57,6 +67,13 @@ export default {
       type:String,
       default:''
     },
+    //要记录的键名
+    queryParams:{
+      type:Array,
+      default:() =>{
+        return ['title'];
+      }
+    }
 
   },
   data() {
@@ -75,12 +92,68 @@ export default {
          this.indexId = index;
       }else if(this.type == 'hash') {
          //切换页面
+         var query = {};
+         
+         this.queryParams.forEach((citem,cindex)=>{
+            query[citem] = item[citem];
+         })
+
+         this.$router.push({
+           path:this.$route.path,
+           query
+         })
       }
+
+      this.$emit('change',item);
     },
   },
   created() {
-    
+    if(this.type == 'hash') {
+       let query = this.$route.query;
+       
+       //保存筛选出来的数组
+       let arr = [];
+
+       //渲染选中项
+       this.queryParams.forEach((item,index)=>{
+         //匹配所有的保存项
+         if(index === 0) {
+            arr = filter(this.navData,item,true).slice(0);
+         }else {
+            arr = filter(arr,item).slice(0);
+         }
+       })
+
+       function filter(dataList,search,isFirstRun = false) {
+         var arr1 = [];
+         dataList.forEach((citem,cindex)=>{
+            if(citem[search] == query[search]) {
+               if(isFirstRun) citem['itemIndex'] = cindex;  
+               arr1.push(citem);
+            }
+         })
+
+         return arr1;
+       }
+ 
+
+       //获取到筛选的那一项
+       if(arr.length > 0) {
+         //如果arr[0].itemIndex 不等于defaultIndex，以arr[0].itemIndex为准
+         this.indexId = arr[0].itemIndex;
+       }else{
+         //hash模式下，defaultIndex只有第一次有效
+         this.selectChange(this.navData[this.defaultIndex],this.defaultIndex);
+       }
+
+    }else {
+       this.indexId = this.defaultIndex;
+    } 
   },
+
+  mounted() {
+    
+  }
 
 }
 

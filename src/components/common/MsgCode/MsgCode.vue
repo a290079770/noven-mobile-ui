@@ -1,11 +1,11 @@
 <template>
-  <span @click="startInterval">
+  <span @click="startInterval" :class="customClass || ''">
      {{typeof this.currentText == 'number' ?currentText + ' s' :currentText}}
   </span>
 </template>
 <script>
 export default {
-  props:['text','reloadText','disabled'],
+  props:['text','reloadText','disabled','customClass','refresh'],
   data() {
     return {
        currentText:'',
@@ -65,15 +65,15 @@ export default {
     clearInterval(this.timer);
   },
   watch:{
-
+    'refresh':function(nv) {
+       this.currentText = this.text || '获取短信验证码';
+       clearInterval(this.timer);
+       this.timer = null;
+    }
   }
 }
 
 </script>
-<style lang='less'>
-   // span {
-   //    display: inline-block;
-   //    width: 100%;
-   //    height: 100%;
-   // }
+<style lang='less' scoped>
+   
 </style>
