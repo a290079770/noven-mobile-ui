@@ -38,11 +38,12 @@ export default {
   },
   watch:{
     'selected':function(val) {
-      this.$router.push({
-        path:this.tabList[val].path,
-        query:this.tabList[val].query
-      })
-    },
+        let find = this.tabList.find( item => item.id == val);
+        this.$router.push({
+          path:find.path,
+          query:find.query
+        })
+      },
 
     // '$route': function(to, from) {
     //    let ShowFooterPathList = ['/assetsIndex','/investIndex','/discoverIndex','/userCenterIndex'];
