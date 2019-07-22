@@ -1,6 +1,16 @@
 //商城首页相关的所有模块
 export default [
   {
+    path: '/pay',   
+    name: '顶部导航', 
+    component: resolve => require.ensure([], () => resolve(require('@/components/doc/Pay.vue')), 'header'),
+  },
+  {
+    path: '/keybordNumber',   
+    name: '数字键盘', 
+    component: resolve => require.ensure([], () => resolve(require('@/components/doc/KeybordNumber.vue')), 'header'),
+  },
+  {
     path: '/header',   
     name: '顶部导航', 
     component: resolve => require.ensure([], () => resolve(require('@/components/doc/Header.vue')), 'header'),

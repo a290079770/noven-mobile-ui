@@ -10,22 +10,22 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-      '/api': {
-        target: 'http://192.168.104.61:8088',//
-        // target: 'http://192.168.111.27:8080',//
-        changeOrigin: true,
-        pathRewrite: {
-          '^/api': 'http://192.168.104.61:8088'
-          // '^/api': 'http://192.168.111.27:8080'
-        }
-      }
-    },
+    // proxyTable: {
+    //   '/api': {
+    //     target: 'http://192.168.104.61:8088',//
+    //     // target: 'http://192.168.111.27:8080',//
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/api': 'http://192.168.104.61:8088'
+    //       // '^/api': 'http://192.168.111.27:8080'
+    //     }
+    //   }
+    // },
 
 
 
-    // host: 'localhost', // luowen
-    host: '192.168.102.183', // luowen
+    host: 'localhost', // luowen
+    // host: '192.168.102.183', // luowen
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,

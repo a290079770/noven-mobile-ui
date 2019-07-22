@@ -43,6 +43,12 @@ import NavMenu from './NavMenu/NavMenu.vue'
 //引入DoubleListScroll
 import DoubleListScroll from './DoubleListScroll/DoubleListScroll.vue'
 
+//引入keybord-number
+import KeybordNumber from './KeybordNumber/keybord-number.vue'
+
+//引入pay
+import Pay from './Pay/pay.vue'
+
 
 
 
@@ -90,6 +96,8 @@ export default {
            {Title:'Marquee',Component:Marquee},
            {Title:'NavMenu',Component:NavMenu},
            {Title:'DoubleListScroll',Component:DoubleListScroll},
+           {Title:'KeybordNumber',Component:KeybordNumber},
+           {Title:'Pay',Component:Pay},
            
            //万家账本
            {Title:'TopBgImg',Component:TopBgImg},

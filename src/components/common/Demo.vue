@@ -35,6 +35,11 @@
      <table class="demo-list">
        <tbody>
          <tr>
+           <td @click="toPath('/keybordNumber')">KeybordNumber<span>数字键盘</span></td>
+           <td @click="toPath('/pay')">Pay<span>支付密码</span></td>
+           <td @click="toPath('/canvasCycle')">CanvasCycle<span>比例环形图</span></td>
+         </tr>
+         <tr>
            <td @click="toPath('/header')">Header<span>头部导航</span></td>
            <td @click="toPath('/footer')">Footer<span>底部导航</span></td>
            <td @click="toPath('/button')">Button<span>自定义按钮</span></td>
