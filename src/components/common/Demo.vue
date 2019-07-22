@@ -765,6 +765,7 @@ export default {
    .demo-list {
      border-collapse: collapse;
      margin: 0 auto;
+     margin-top: 0.4rem;
      width: 90%;
    }
 

@@ -17,6 +17,9 @@
    <h4>展示</h4>
    <p class="show-text">
     <Button @click="showKeybord = true" type="primary" :plain="true" style="width:1.8rem;height:0.6rem">显示组件</Button>
+    <span style="margin-left: 0.3rem">
+      {{num}}
+    </span>
    </p>
 
    <KeybordNumber :showKeybord="showKeybord" @input="onInput" @close="showKeybord = false"/>
@@ -107,13 +110,21 @@
 export default {
   data () {
     return {
-      showKeybord: false
+      showKeybord: false,
+      num: ''
     }
   },
 
   methods:{
     onInput(num) {
-      console.log(num)
+      if(num === -1) {
+        this.num = this.num.split('');
+        this.num.pop();
+        this.num = this.num.join('')
+        return
+      }
+
+      this.num += num
     },
   },
   created() {
